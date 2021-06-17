@@ -1,1 +1,205 @@
-Coming soon. Please check back later.
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Transferring Dense Pose to Proximal Animal Classes.">
+    <meta name="author" content="Artsiom Sanakoyeu">
+
+    <title>Discovering Relationships between Object Categories via Universal Canonical Maps</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="index_files/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="index_files/font-awesome.html" rel="stylesheet" type="text/css">
+    <link href="index_files/css.css" rel="stylesheet" type="text/css">
+    <link href="index_files/css_002.css" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="index_files/magnific-popup.html" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="index_files/creative.css" rel="stylesheet">
+    <link href="index_files/footer.css" rel="stylesheet">
+    <link href="index_files/academicons.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+
+
+    <section class="bg-dark" style="padding: 1em">
+      </section>
+
+    <section class="container" id="body">
+      <div class="container">
+        <center>
+          <hr class="light my-4">
+          <h2 class="section-heading mb-3" style="color: #343a40; font-size: calc(20px + 0.8vw);"><b>Discovering Relationships between Object Categories via Universal Canonical Maps</b></h2>
+            <h3 class="text-dark mb-4" style="font-size: calc(15px + 0.6vw);"><b><i>In CVPR 2021</i></b></h3>
+            <h3 class="text-dark mb-4" style="font-size: calc(15px + 0.6vw);">
+                <a href="https://arxiv.org/abs/TODO" style="color: #8b0000;"><b>arXiv preprint</b><img src="index_files/pdf_icon2.png" style="width: calc(15px + 0.6vw);"></a> 
+            </h3>
+          <div class="row mb-2">
+            <!-- <div class="col-md-1"></div> -->
+            <div class="col-auto col-md-3" style="margin: 0 auto auto 20px;">
+              <p class="text-dark mb-1"><a href="https://nneverova.github.io/" style="color: #343a40; font-size: calc(6px + 0.8vw);">Natalia Neverova<sup>*</sup></a></p>
+            </div>
+            <div class="col-auto col-md-4" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="http://asanakoy.github.io" style="color: #343a40; font-size: calc(6px + 0.8vw);">Artsiom Sanakoyeu<sup>*</sup></a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="" style="color: #343a40; font-size: calc(6px + 0.8vw);">Patrick Labatut</a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="" style="color: #343a40; font-size: calc(6px + 0.8vw);">David Novotny</a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 20px auto auto;">
+              <p class="text-dark mb-1"><a href="https://www.robots.ox.ac.uk/~vedaldi/" style="color: #343a40; font-size: calc(6px + 0.8vw);">Andrea Vedaldi</a></p>
+            </div>
+
+            <div class="col-md-1"></div>
+          </div>
+
+          <p></p>
+
+          <!-- <div class="row mb-2"> -->
+            <center>
+                <div style="margin: 0 auto;">
+                    <p class="text-dark mb-1" style="color: #343a40; font-size: calc(8px + 0.4vw);"><sup>*</sup>Denotes equal contribution.</p>
+                </div>
+            </center>
+            <!-- <div class="col-md-1"></div> -->
+
+            <div class="row mb-2">
+                <!-- <div class="col-md-1"></div> -->
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                  <p class="text-dark mb-1"><a href="https://ai.facebook.com/" style="color: #343a40; font-size: calc(8px + 0.4vw);">Facebook AI Research (FAIR)</a></p>
+                </div>
+              </div>
+            
+          <!-- </div> -->
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <!-- <iframe width="960" height="540" src="" style="max-width: 100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <img style="max-width: 100%" src="index_files/teaser.png">
+              <p class="text-dark mb-4" style="font-size: calc(10px + 0.2vw);"><b>Inter-category correspondences emerge from dense pose prediction.</b> Our method discovers high-quality correspondences between different object classes automatically, as a byproduct of learning category-specific dense pose predictors. It does so by enforcing cycle consistency between reference 3D templates as well as by a new type of consistency between images and templates. This allows the model to transfer information between animal classes (<i>eg</i> the location of the eyes).</p>
+                
+                
+
+              <hr class="light my-3">
+              <p class="text-dark mb-1" style="font-size: calc(15px + 0.6vw);">Abstract</p>
+              <p class="text-dark mb-4" style="font-size: calc(10px + 0.2vw);" align="justify">
+                  We tackle the problem of learning the geometry of multiple categories of deformable objects jointly.
+Recent work has shown that it is possible to learn a unified dense pose predictor for several categories of related objects.
+However, training such models requires to initialize inter-category correspondences by hand.
+This is suboptimal and the resulting models fail to maintain correct correspondences as individual categories are learned.
+In this paper, we show that improved correspondences can be learned automatically as a natural byproduct of learning category-specific dense pose predictors.
+To do this, we express correspondences between different categories and between images and categories using a unified embedding.
+Then, we use the latter to enforce two constraints: symmetric inter-category cycle consistency and a new asymmetric image-to-category cycle consistency.
+Without any manual annotations for the inter-category correspondences, we obtain state-of-the-art alignment results, outperforming dedicated methods for matching 3D shapes.
+Moreover, the new model is also better at the task of dense pose prediction than prior work.
+              </p>
+              
+              <hr class="light my-3">
+              <p class="text-dark mb-3" style="font-size: calc(15px + 0.6vw);"><bf>Resources</bf></p>
+              <div class="row mb-2">
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                    <p class="text-dark mb-1"><a href="https://arxiv.org/abs/TODO">[Paper]</a></p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                    <p class="text-dark mb-1"><a href="https://github.com/asanakoy/discovering-3d-obj-rel">[Code]</a></p>
+                </div>
+<!--
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                    <p class="text-dark mb-1"><a href="https://ai.facebook.com/blog/dense-pose-for-animal-classes-using-transfer-learning">[Blog]</a></p>
+                </div>
+-->
+              </div>
+                
+<!--
+              <hr class="light my-3">
+              <p class="text-dark mb-3" style="font-size: calc(15px + 0.6vw);"><bf>Results</bf></p>
+            
+              <p class="text-dark" style="font-size: calc(12px + 0.48vw);">Predicted body part segmentation and uv-maps for chimps</p>
+              <p>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/BGpaVv_kHZw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </p>
+                
+                
+              <p class="text-dark" style="font-size: calc(12px + 0.48vw);">Comparison of <i>teacher</i> and <i>student</i> model</p>
+              <p>
+               <iframe width="720" height="250" src="https://www.youtube.com/embed/OU3Ayg_l4QM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </p>
+                
+
+                <p class="text-dark" style="font-size: calc(12px + 0.2vw);"> Visual results: <b>(left)</b> <i>teacher</i> network predictions vs <b>(right)</b> predictions of <i>student</i> network trained using I-sampling. The <i>student</i> produces more accurate boundaries and uv-maps. Zoom-in for details.</p>
+              <center>
+                  
+                      <img src="index_files/colorful.png" style="max-width: 100%; margin: auto;">
+                  
+              </center>
+              <hr class="light my-3">
+-->
+
+
+              <hr class="light my-3">
+              <p class="text-dark mb-1" style="font-size: calc(15px + 0.6vw);">Citation</p>
+              <code class="codebox">
+                  <!------
+                  <pre>@misc{Neverova_Sanakoyeu21,
+  author={Natalia Neverova and Artsiom Sanakoyeu and Patrick Labatut and David Novotny and Andrea Vedaldi},
+  title={Discovering Relationships between Object Categories via Universal Canonical Maps},
+  year={2021},
+  eprint={TODO},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}</pre>
+                  ------->
+                  <pre>@InProceedings{Neverova_Sanakoyeu21,
+  title={Discovering Relationships between Object Categories via Universal Canonical Maps},
+  author={Natalia Neverova and Artsiom Sanakoyeu and Patrick Labatut and David Novotny and Andrea Vedaldi},
+  booktitle={CVPR},
+  year={2021},
+}</pre>
+              </code>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+        </center>
+      </div>
+    </section>
+
+    <section class="bg-dark" style="padding: 1em">
+        <center>
+          <div class="footer-social-icons">
+            <ul class="social-icons">
+               <!-- <li><a href="https://github.com/asanakoy" title="GitHub" class="social-icon sr-button" style="font-size: 2em; color:#fff;"> <i class="fa fa-github"></i></a></li>  -->
+            </ul>
+          </div>
+        </center>
+      </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="index_files/jquery_002.html"></script>
+    <script src="index_files/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="index_files/jquery_003.html"></script>
+    <script src="index_files/scrollreveal.html"></script>
+    <script src="index_files/jquery.html"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="index_files/creative.js"></script>
+
+  
+
+
+</body></html>
