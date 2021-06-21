@@ -10,7 +10,7 @@
 📝 **Paper arXiv**: https://arxiv.org/abs/2106.09758
 
 # Source code
-Coming soon.
+The source code for this paper is available in [DensePose implementation](https://github.com/facebookresearch/detectron2/tree/master/projects/DensePose) of Detectron2 library.
 
 
 
