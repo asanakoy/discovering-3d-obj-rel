@@ -1,6 +1,6 @@
 # Discovering Relationships between Object Categories via Universal Canonical Maps
 **Natalia Neverova\*, Artsiom Sanakoyeu\*, Patrick Labatut, David Novotny, Andrea Vedaldi**,
-***In CVPR 2020*** 
+***In CVPR 2021*** 
 
 
 ![image](https://github.com/asanakoy/discovering-3d-obj-rel/blob/main/docs/index_files/teaser.png)
