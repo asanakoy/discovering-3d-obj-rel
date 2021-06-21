@@ -30,7 +30,7 @@ BibTeX entries:
 ```
 
 
-DenseposeEvolution bootstrapping pipeline:
+[DenseposeEvolution](https://gdude.de/densepose-evolution/) bootstrapping pipeline:
 ```
 @InProceedings{Sanakoyeu2020TransferringDensePose,
     title = {Transferring Dense Pose to Proximal Animal Classes},
